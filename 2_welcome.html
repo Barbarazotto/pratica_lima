@@ -2,39 +2,75 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="5; url=3_login.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=3_login.html">
   <title>Welcome Screen</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
       color: white;
-      background: url('images/windows11-default-wallpaper-scaled.jpg') no-repeat center center fixed;
+      background: url('images/windows-11-stock-purple-abstract-black.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+    }
+
+    .top-info {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
     }
 
     .hora {
-      font-size: 5em;
+      font-size: 6em;
       font-weight: 300;
+      margin: 0;
     }
 
     .data {
       font-size: 2em;
       margin-top: 10px;
     }
+
+    .bottom-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .bottom-icons img {
+      width: 24px;
+      filter: brightness(0) invert(1);
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .bottom-icons img:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
-  <div class="hora">15:00</div>
-  <div class="data">11 de junho de 2025</div>
+
+  <div class="top-info">
+    <div class="hora">14:00</div>
+    <div class="data">Saturday, 16 June</div>
+  </div>
+
+  <div class="bottom-icons">
+    <img src="https://img.icons8.com/?size=100&id=PLlw4LevCJrl&format=png&color=000000" alt="Internet" title="Internet">
+    <img src="https://img.icons8.com/?size=100&id=m8Q71Nx1p94q&format=png&color=000000" alt="Bateria" title="Bateria">
+  </div>
+
+
 </body>
 </html>
-

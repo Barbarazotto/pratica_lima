@@ -1,16 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=5_bsod.html">
-    <title>Booting</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5; url=5_bsod.html">
+  <title>Login - Windows 11 Style</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: url('images/windows-11-purple-bloom-cd0qqfy3lnxyakac.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .desktop {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 0px;
+      z-index: 0;
+    }
+
+    .coluna {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .atalho {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-size: 12px;
+      width: 80px;
+      text-align: center;
+    }
+
+    .atalho img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 4px;
+    }
+
+    .barra-tarefas {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 48px;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      color: white;
+    }
+
+    .barra-centro {
+      display: flex;
+      gap: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      top: 23%;
+    }
+
+    .barra-centro img {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+
+    .barra-direita {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .barra-direita img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+    }
+
+    .pesquisar-input {
+      width: 242px;
+      padding: 9px;
+      border-radius: 223px;
+      border: none;
+      text-align:center;
+      background-color: rgba(122, 114, 114, 0.5);
+      color: rgb(255, 255, 255);
+      font-size: 1em;
+      outline: none;
+    }
+    .send-button {
+      position:relative;
+      right: 243px;
+      top: 45%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Área de Trabalho</h1>
-        <img class="tela" src="images/windows11-alt1-wallpaper.webp" alt="Área de Trabalho">
+  <div class="desktop">
+   <div class="coluna">
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=3e0VGst16Oy4&format=png&color=000000" alt="Arquivos">
+        <div>Arquivos</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=s5NUIabJrb4C&format=png&color=000000" alt="Configurações">
+        <div>Configurações</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/color/48/visual-studio-code-2019.png" alt="VS Code">
+        <div>VS Code</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=G9XXzb9XaEKX&format=png&color=000000" alt="Spotify">
+        <div>Spotify</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+        <div>WhatsApp</div>
+      </div>
+      <div class="atalho">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/512px-Google_Classroom_Logo.svg.png" alt="ClassRoom">
+        <div>ClassRoom</div>
+      </div>
     </div>
+
+    <!-- Coluna 2 -->
+    <div class="coluna">
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=62YmgvjaywD2&format=png&color=000000" alt="Netflix">
+        <div>Netflix</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google">
+        <div>Google</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/color/48/microsoft-word-2019.png" alt="Word">
+        <div>Word</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/color/48/github.png" alt="GitHub">
+        <div>GitHub</div>
+      </div>
+      <div class="atalho">
+        <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube">
+        <div>YouTube</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="barra-tarefas">
+    <div style="width: 200px;"></div>
+
+    <div class="barra-centro">
+      <img src="images/icons8-windows-11-64.png" title="Início">
+      
+      <div class="pesquisar-wrapper">
+        <input type="pesquisar" class="pesquisar-input" placeholder="Pesquisar">
+        <button class="send-button">🔍</button>
+      </div>
+      <img src="https://img.icons8.com/?size=100&id=9x65MLqCekT5&format=png&color=000000" title="Widgets">
+      <img src="https://img.icons8.com/?size=100&id=P0xhuRBy8MnO&format=png&color=000000" title="Microsoft Store">
+      <img src="https://img.icons8.com/color/48/whatsapp--v1.png" title="WhatsApp">
+      <img src="https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000" title="Ecxel">
+      <img src="https://img.icons8.com/?size=100&id=63785&format=png&color=000000" title="Google">
+      <img src="https://img.icons8.com/color/48/microsoft-word-2019.png" title="Word">
+      <img src="https://img.icons8.com/?size=100&id=ifP93G7BXUhU&format=png&color=000000" title="PowerPoint">
+      <img src="https://img.icons8.com/?size=100&id=wrIwUNhk1J4k&format=png&color=000000" title="Relógio">
+    </div>
+
+    <div class="barra-direita">
+      <img src="https://img.icons8.com/?size=100&id=DLTtBqImj3s3&format=png&color=000000" alt="Mostrar ícones ocultos">
+      <span>POR</span>
+      <img src="https://img.icons8.com/material-outlined/24/speaker.png" title="Som">
+      <img src="https://img.icons8.com/?size=100&id=PLlw4LevCJrl&format=png&color=000000">
+      <div id="hora">00:00</div>
+      <div id="data">00/00/0000</div>
+      <img src="https://img.icons8.com/material-rounded/24/appointment-reminders.png" title="Notificações">
+    </div>
+  </div>
+
+  <script>
+    function atualizarHoraData() {
+      const agora = new Date();
+      const hora = agora.getHours().toString().padStart(2, '0');
+      const minuto = agora.getMinutes().toString().padStart(2, '0');
+      document.getElementById("hora").textContent = `${hora}:${minuto}`;
+
+      const dia = agora.getDate().toString().padStart(2, '0');
+      const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+      const ano = agora.getFullYear();
+      document.getElementById("data").textContent = `${dia}/${mes}/${ano}`;
+    }
+
+    atualizarHoraData();
+    setInterval(atualizarHoraData, 1000);
+  </script>
 </body>
 </html>
